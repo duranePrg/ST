@@ -1,0 +1,1617 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+     
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
+      <link rel="stylesheet" href="css/chartist.min.css">
+
+	  <!-- Responsive Menu-->
+	<link rel="stylesheet" type="text/css" href="css/menumaker.css">
+	
+      <!--Import Chartist.js-->
+	  <script src="js/highcharts.js"></script>
+      
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/chartist.min.js"></script>
+   <!--line graphs-->
+    
+    <script type="text/javascript" src="js/chartist-plugin-pointlabels.min.js"></script>
+
+   
+   
+      <!--Import Cezetmap - thanks to team from Moravio (https://github.com/Moravio/CEZET-Map) -->
+      <link rel="stylesheet" href="css/cezetmap.css" />
+      <!--<link rel="stylesheet" href="css/cezetmap.custom.css" />-->
+	  <link rel="stylesheet" href="css/cezetmap.custom.smaller.css" />
+     
+      <script src="js/cezetmap.js"> </script>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+<body>
+
+	<div class="container">
+        <!-- Header goes here -->
+		<div class="row">
+            <header>
+                <h1>Foreigners in the Czech Republic</h1>
+            </header>
+            <!-- Navbar goes here -->
+				<div id="cssmenu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+						<li>
+							<a href="#">Foreiners </a>
+							<ul>
+								<li><a href="by-area-regions.html">By Regions</a></li>
+								<li><a href="by-citizenship.html">By Citizenships</a></li>
+								<li><a href="top6-citizenships.html">Top 6 Countries</a></li>
+								
+							</ul>
+						</li>
+						<li><a href="demographic-events.html">Demography</a></li>
+						<li><a href="#">Education</a>
+							<ul>
+								<li><a href="by-type-of-school.html">By type of school</a></li>
+								<li><a href="university.html">University</a></li>
+								<li><a href="higher-professional-schools.html">Higher schools</a></li>
+							</ul>
+						</li>
+					<li><a href="criminality.html">Criminality</a></li>
+					<li><a href="ilegal-migration.html">Illegal migration</a></li>
+					<li><a href="adquisition-of-cz.html">Acquisition of citizenship</a></li>
+				
+				</ul>
+			</div>
+		</div>
+			<!-- first row Page Layout  -->
+		<div class="row">
+					<div class="col s4 center" >
+						<div class="text-center">
+						 <strong><center>Chose the Region:</center></strong>
+						 <br>
+						 <br>
+						</div>
+						<div class="cezetmap smaller">
+							<ul class="kraje smaller">
+								<li class="kraj zlinsky">Zlínský kraj</li>
+								<li class="kraj moravskoslezsky">Moravskoslezský kraj</li>
+								<li class="kraj jihomoravsky">Jihomoravský kraj</li>
+								<li class="kraj olomoucky">Olomoucký kraj</li>
+								<li class="kraj vysocina">Vysocina</li>
+								<li class="kraj pardubicky">Pardubický kraj</li>
+								<li class="kraj kralovehradecky">Královehradecký kraj</li>
+								<li class="kraj jihocesky">Jihoceský kraj</li>
+								<li class="kraj hlavni-mesto-praha">Hlavní mesto Praha</li>
+								<li class="kraj stredocesky">Stredoceský kraj</li>
+								<li class="kraj liberecky">Liberecký kraj</li>
+								<li class="kraj plzensky">Plzenský kraj</li>
+								<li class="kraj ustecky">Ústecký kraj</li>
+								<li class="kraj karlovarsky">Karlovarský kraj</li>
+							</ul>
+						</div>
+						<p class="source-title">Map: <a href="http://www.cezetmap.cz/">Cezetmap</a> | <a href="http://www.moravio.com/">MORAVIO.COM</a></p>
+					     <small><strong><center>Total foreigners in Czech Republic in 2015: 464 670 </center></strong></small>
+						 <small><center>Note: Data do not inclaude foreigners with valid asylum </center></small>
+						 
+					</div> <!-- col s8 -->
+					<div class="col s3">
+					</div>
+					<!-- table -->
+					<div class="col s3">
+						 <div class="kraj-tabulka kr-stredocesky display-none">
+							<h3>Stredoceský (2015)</h3>
+							<h3><strong>Total: 61 682</strong></h3>
+							<table class="table striped">
+								<tr><td>Benešov</td><td>2 315</td></tr>
+								<tr><td>Beroun</td><td>3 741</td></tr>
+								<tr><td>Kladno</td><td>6 486</td></tr>
+								<tr><td>Kolín</td><td>3 302</td></tr>
+								<tr><td>Kutná Hora</td><td>2 054</td></tr>
+								<tr><td>Mělník</td><td>4 052</td></tr>
+								<tr><td>Mladá Boleslav</td><td>9 651</td></tr>
+								<tr><td>Nymburk</td><td>3 814</td></tr>
+								<tr><td>Praha - východ</td><td>1 1160</td></tr>
+								<tr><td>Praha - západ</td><td>1 0282</td></tr>
+								<tr><td>Príbram</td><td>2 648</td></tr>
+								<tr><td>Rakovník</td><td>1 817</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-jihocesky display-none">
+							<h3>Jihoceský (2015)</h3>
+							<h3><strong>Total: 16 390</strong></h3>
+							<table class="table striped">
+								<tr><td>Ceské Budejovice</td><td>5 391</td></tr>
+								<tr><td>Ceský Krumlov</td><td>2 706</td></tr>
+								<tr><td>Jindrichuv Hradec</td><td>1 729</td></tr>
+								<tr><td>Písek</td><td>1 728</td></tr>
+								<tr><td>Prachatice</td><td>1 203</td></tr>
+								<tr><td>Strakonice</td><td>1 870</td></tr>
+								<tr><td>Tábor</td><td>1 763</td></tr>
+								
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-plzensky display-none">
+							<h3>Plzenský (2015)</h3>
+							<h3><strong>Total: 27 304</strong></h3>
+							<table class="table striped">
+								<tr><td>Domažlice</td><td>2 750</td></tr>
+								<tr><td>Klatovy</td><td>2 578</td></tr>
+								<tr><td>Plzen</td><td>13 649</td></tr>
+								<tr><td>Plzen - jih</td><td>1 786</td></tr>
+								<tr><td>Plzen - sever</td><td>1 677</td></tr>
+								<tr><td>Rokycany</td><td>1 614</td></tr>
+								<tr><td>Tachov</td><td>3 250</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-karlovarsky display-none">
+							<h3>Karlovarský (2015)</h3>
+							<h3><strong>Total: 19 073</strong></h3>
+							<table class="table striped">
+								<tr><td>Cheb</td><td>7 302</td></tr>
+								<tr><td>Karlovy Vary</td><td>9 056</td></tr>
+								<tr><td>Sokolov</td><td>2 715</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-ustecky display-none">
+							<h3>Ústecký (2015)</h3>
+							<h3><strong>Total: 32 612</strong></h3>
+							<table class="table striped">
+								<tr><td>Decín</td><td>4 175</td></tr>
+								<tr><td>Chomutov</td><td>5 512</td></tr>
+								<tr><td>Litomerice</td><td>3 453</td></tr>
+								<tr><td>Louny</td><td>2 183</td></tr>
+								<tr><td>Most</td><td>4 985</td></tr>
+								<tr><td>Teplice</td><td>7 543</td></tr>
+								<tr><td>Ústí nad Labem</td><td>4 761</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-kralovehradecky display-none">
+							<h3>Královéhradecký (2015)</h3>
+							<h3><strong>Total: 13 683</strong></h3>
+							<table class="table striped">
+								<tr><td>Hradec Králové</td><td>4 799</td></tr>
+								<tr><td>Jicín</td><td>2 014</td></tr>
+								<tr><td>Náchod</td><td>2 488</td></tr>
+								<tr><td>Rychnov nad Knežnou</td><td>1 460</td></tr>
+								<tr><td>Trutnov</td><td>2 922</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-liberecky display-none">
+							<h3>Liberecký (2015)</h3>
+							<h3><strong>Total: 17 894</strong></h3>
+							<table class="table striped">
+								<tr><td>Ceská Lípa</td><td>3 602</td></tr>
+								<tr><td>Jablonec nad Nisou</td><td>3 827</td></tr>
+								<tr><td>Liberec</td><td>8 712</td></tr>
+								<tr><td>Semily</td><td>1 753</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-pardubicky display-none">
+							<h3>Pardubický (2015)</h3>
+							<h3><strong>Total: 12 011</strong></h3>
+							<table class="table striped">
+								<tr><td>Chrudim</td><td>1 460</td></tr>
+								<tr><td>Pardubice</td><td>6 369</td></tr>
+								<tr><td>Svitavy</td><td>1 205</td></tr>
+								<tr><td>Ústí nad Orlicí</td><td>2 977</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-vysocina display-none">
+							<h3>Kraj Vysocina (2015)</h3>
+							<h3><strong>Total: 8 050</strong></h3>
+							<table class="table striped">
+								<tr><td>Havlíckuv Brod</td><td>1 584</td></tr>
+								<tr><td>Jihlava</td><td>2 473</td></tr>
+								<tr><td>Pelhrimov</td><td>1 565</td></tr>
+								<tr><td>Trebíc</td><td>1 267</td></tr>
+								<tr><td>Ždár nad Sázavou</td><td>1 161</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-olomoucky display-none">
+							<h3>Olomoucký (2015)</h3>
+							<h3><strong>Total: 10 413</strong></h3>
+							<table class="table striped">
+								<tr><td>Jeseník</td><td>811</td></tr>
+								<tr><td>Olomouc</td><td>4 963</td></tr>
+								<tr><td>Prostejov</td><td>1 407</td></tr>
+								<tr><td>Prerov</td><td>1 990</td></tr>
+								<tr><td>Šumperk</td><td>1 242</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-hlavni-mesto-praha display-none">
+							<h3>Hlavní mesto Praha (2015)</h3>
+							<h3><strong>Total: 171 408</strong></h3>
+							<table class="table striped">
+								<tr><td>Praha 1</td><td>5 263</td></tr>
+								<tr><td>Praha 2</td><td>10 411</td></tr>
+								<tr><td>Praha 3</td><td>12 570</td></tr>
+								<tr><td>Praha 4</td><td>32 263</td></tr>
+								<tr><td>Praha 5</td><td>28 180</td></tr>
+								<tr><td>Praha 6</td><td>17 780</td></tr>
+								<tr><td>Praha 7</td><td>6 967</td></tr>
+								<tr><td>Praha 8</td><td>12 449</td></tr>
+								<tr><td>Praha 9</td><td>24 303</td></tr>
+								<tr><td>Praha 10</td><td>20 834</td></tr>
+								<tr><td>Praha</td><td>288</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-zlinsky display-none">
+							<h3>Zlínský (2015)</h3>
+							<h3><strong>Total: 8 538</strong></h3>
+							<table class="table striped">
+								<tr><td>Kromeríž</td><td>1 130</td></tr>
+								<tr><td>Uherské Hradište</td><td>2 353</td></tr>
+								<tr><td>Vsetín</td><td>1 604</td></tr>
+								<tr><td>Zlín</td><td>3 451</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-moravskoslezsky display-none">
+							<h3>Moravskoslezský:</h3>
+							<h3><strong>Total: 24 493</strong></h3>
+							<table class="table striped">
+								<tr><td>Bruntál</td><td>935</td></tr>
+								<tr><td>Frýdek-Místek</td><td>3 602</td></tr>
+								<tr><td>Karviná</td><td>6 253</td></tr>
+								<tr><td>Nový Jicín</td><td>1 800</td></tr>
+								<tr><td>Opava</td><td>1 649</td></tr>
+								<tr><td>Ostrava-mesto</td><td>10 254</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-jihomoravsky display-none">
+							<h3>Jihomoravský (2015)</h3>
+							<h3><strong>Total: 40 366</strong></h3>
+							<table class="table striped">
+								<tr><td>Blansko</td><td>2 140</td></tr>
+								<tr><td>Brno-mesto</td><td>24 850</td></tr>
+								<tr><td>Brno-venkov</td><td>4 802</td></tr>
+								<tr><td>Breclav</td><td>2 423</td></tr>
+								<tr><td>Hodonín</td><td>2 095</td></tr>
+								<tr><td>Vyškov</td><td>1 611</td></tr>
+								<tr><td>Znojmo</td><td>2 445</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+					   
+					</div><!-- end of table -->
+					<div class="col s3">
+					</div>
+		</div> <!-- main row -  -->
+		<!--second main row -  -->
+			<div class="row"> <!--Region names to show up in the center as a title of the graphs -->
+				<div class="col s12 center" >
+						<div class="kraj-tabulka kr-jihocesky display-none"><p class="region_names">Jihočeský (2002 - December 2015)</p></div>
+						<div class="kraj-tabulka kr-zlinsky display-none">Zlínský (2002 - December 2015)</div>
+						<div class="kraj-tabulka kr-moravskoslezsky display-none">Moravskoslezský (2002 - December 2015)</div>
+						<div class="kraj-tabulka kr-jihomoravsky display-none">Jihomoravský (2002 - December 2015)</div>
+						<div class="kraj-tabulka kr-olomoucky display-none">Olomoucký (2002 - December 2015)</div>
+						<div class="kraj-tabulka kr-vysocina display-none">Vysočina (2002 - December 2015)</div>
+						<div class="kraj-tabulka kr-pardubicky display-none">Pardubický (2002 - December 2015)</div>
+						<div class="kraj-tabulka kr-kralovehradecky display-none">Královehradecký (2002 - December 2015)</div>
+						<div class="kraj-tabulka kr-hlavni-mesto-praha display-none">Hlavní město Praha (2002 - December 2015)</div>
+						<div class="kraj-tabulka kr-stredocesky display-none">Středočeský (2002 - December 2015)</div>
+						<div class="kraj-tabulka kr-liberecky display-none">Liberecký (2002 - December 2015)</div>
+						<div class="kraj-tabulka kr-plzensky display-none">Plzeňský (2002 - December 2015)</div>
+						<div class="kraj-tabulka kr-ustecky display-none">Ústecký (2002 - December 2015)</div>
+						<div class="kraj-tabulka kr-karlovarsky display-none">Karlovarský (2002 - December 2015)</div>
+				</div>
+			</div>
+			<!--end of the second main row -  -->
+		<div class="row">
+		
+				<!--Line grahp -->
+				<div class="col s6 center" >
+						<div class="kraj-tabulka kr-zlinsky display-none">
+						<p class="region_names"><center>Total by years</center></p>
+						</div>
+
+						<div class="kraj-tabulka kr-moravskoslezsky display-none">
+						<p class="region_names"><center>Total by years</center></p>
+						</div>
+
+						<div class="kraj-tabulka kr-jihomoravsky display-none">
+							<p class="region_names"><center>Total by years</center></p>
+						</div>
+
+						<div class="kraj-tabulka kr-olomoucky display-none">
+							<p class="region_names"><center>Total by years</center></p>
+						</div>
+
+						<div class="kraj-tabulka kr-vysocina display-none">
+							<p class="region_names"><center>Total by years</center></p>
+						</div>
+
+						<div class="kraj-tabulka kr-pardubicky display-none">
+							<p class="region_names"><center>Total by years</center></p>
+						</div>
+
+						<div class="kraj-tabulka kr-kralovehradecky display-none">
+							<p class="region_names"><center>Total by years</center></p>
+						</div>
+
+						<div class="kraj-tabulka kr-jihocesky display-none">
+							<p class="region_names"><center>Total by years</center></p>
+							
+						</div>
+
+						<div class="kraj-tabulka kr-hlavni-mesto-praha display-none">
+						<p class="region_names"><center>Total by years</center></p>
+						</div>
+
+						<div class="kraj-tabulka kr-stredocesky display-none">
+							<p class="region_names"><center>Total by years</center></p>
+						</div>
+
+						<div class="kraj-tabulka kr-liberecky display-none">
+						<p class="region_names"><center>Total by years</center></p>
+						</div>
+
+						<div class="kraj-tabulka kr-plzensky display-none">
+							<p class="region_names"><center>Total by years</center></p>
+						</div>
+
+						<div class="kraj-tabulka kr-ustecky display-none">
+						<p class="region_names"><center>Total by years</center></p>
+						</div>
+
+						<div class="kraj-tabulka kr-karlovarsky display-none">
+						<p class="region_names"><center>Total by years</center></p>
+						</div>
+
+
+
+					<div class="kraj-tabulka kr-jihocesky display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-jihocesky"></div>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+
+					<div class="kraj-tabulka kr-stredocesky display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-stredocesky"></div>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+
+					<div class="kraj-tabulka kr-plzensky display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-plzensky"></div>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+
+					<div class="kraj-tabulka kr-karlovarsky display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-karlovarsky"></div>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+
+					<div class="kraj-tabulka kr-ustecky display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-ustecky"></div>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+
+					<div class="kraj-tabulka kr-kralovehradecky display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-kralovehradecky"></div>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+
+					<div class="kraj-tabulka kr-liberecky display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-liberecky"></div>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+
+					<div class="kraj-tabulka kr-pardubicky display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-pardubicky"></div>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+
+					<div class="kraj-tabulka kr-vysocina display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-vysocina"></div>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+
+					<div class="kraj-tabulka kr-olomoucky display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-olomoucky"></div>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+
+					<div class="kraj-tabulka kr-hlavni-mesto-praha display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-hlavni-mesto-praha"></div>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+
+					<div class="kraj-tabulka kr-zlinsky display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-zlinsky"></div>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+
+					<div class="kraj-tabulka kr-moravskoslezsky display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-moravskoslezsky"></div>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+
+					<div class="kraj-tabulka kr-jihomoravsky display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-jihomoravsky"></div>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+				</div>
+				<!-- en of line grahp -->
+				<!-- bar grahp -->
+				<div class="col s6 center" >
+						 
+					<div class="kraj-bar kr2-jihocesky display-none">
+						<p class="region_names"><center>Total by area and district</center></p>		
+						<div id="graph2" style="height: 480px"></div>
+							<script>
+							$(function () {
+								Highcharts.chart('graph2', {
+									chart: {
+										type: 'column'
+									},
+									title: {
+										text: null
+									},
+									subtitle: {
+										text: 'NUTS3'
+									},
+									xAxis: {
+										categories: ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015'],
+										crosshair: true
+									},
+									yAxis: {
+										min: 0,
+										title: {
+											text: 'Foreigners'
+										}
+									},
+									tooltip: {
+										headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+										pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+											'<td style="padding:0"><b>{point.y:.0f} </b></td></tr>',
+										footerFormat: '</table>',
+										shared: true,
+										useHTML: true
+									},
+									plotOptions: {
+										column: {
+											pointPadding:0.1,
+											borderWidth: 0.1
+										}
+									},
+									series: [{
+										name: 'České Budějovice ',
+									  data: [2954,3243,2826,3075,3932,4716,4935,4737,4726,4855,4970,5121,5130,5391]
+									}, {
+										name: 'Český Krumlov ',
+										data: [1618,1717,1929,2123,2364,2737,2844,2791,2867,2734,2606,2660,2638,2706] 	
+									}, {
+										name: 'Jindřichův Hradec ',
+										data: [919,1084,1212,1261,1278,1431,2052,1777,1667,1667,1621,1638,1650,1729] 	 
+									}, {
+										name: 'Písek ',
+										data: [590,631,689,754,903,1056,1137,1048,1065,1099,1163,1286,1419,1728] 	 
+									},{
+										name: 'Prachatice ',
+										data: [750,830,964,961,997,1159,1248,1213,1171,1093,1079,1112,1081,1203] 	 
+									},{
+										name: 'Strakonice ',
+										data: [1215,1450,1608,1543,2085,2870,3010,2413,2027,1860,1767,1742,1773,1870]
+									},{
+										name: 'Tábor ',
+										data: [652,705,726,878,1025,1202,1334,1436,1514,1586,1632,1641,1675,1763]
+									}]
+								});
+							});
+							</script>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+
+					<div class="kraj-bar kr2-stredocesky display-none">
+						<p class="region_names"><center>Total by area and district</center></p>		
+							<div id="graph3" style="height: 480px"></div>
+							<script>
+							$(function () {
+								Highcharts.chart('graph3', {
+									chart: {
+										type: 'column'
+									},
+									title: {
+										text: null
+									},
+									subtitle: {
+										text: 'NUTS3'
+									},
+									xAxis: {
+										categories: ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015'],
+										crosshair: true
+									},
+									yAxis: {
+										min: 0,
+										title: {
+											text: 'Foreigners'
+										}
+									},
+									tooltip: {
+										headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+										pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+											'<td style="padding:0"><b>{point.y:.0f} </b></td></tr>',
+										footerFormat: '</table>',
+										shared: true,
+										useHTML: true
+									},
+									plotOptions: {
+										column: {
+											pointPadding:0.1,
+											borderWidth: 0.1
+										}
+									},
+									series: [{
+										name: 'Benešov ',
+									  data: [1297,	1359,	1420,	1324,	1449,	1745,	1959,	2036,	2026,	2156,	2187,	2202,	2274,	2315]
+									}, {
+										name: 'Beroun ',
+										data: [1291,	1598,	2006,	2320,	2633,	3134,	3469,	3003,	2946,	3082,	3148,	3266,	3515,	3741] 	
+									}, {
+										name: 'Kladno ',
+										data: [3415,	3843,	4064,	4178,	4738,	5010,	5403,	5524,	5795,	5808,	5976,	6308,	6609,	6846] 	 
+									}, {
+										name: 'Kolín ',
+										data: [1324,	1599,	1615,	1933,	2391,	2800,	3405,	3314,	3140,	3191,	3160,	3134,	3186,	3302] 	 
+									},{
+										name: 'Kutná Hora ',
+										data: [1016,	1146,	1104,	1365,	1942,	1973,	1925,	1607,	1643,	1716,	1793,	1862,	1893,	2054] 	 
+									},{
+										name: 'Mělník ',
+										data: [2761,	3022,	3403,	4085,	4702,	5149,	6636,	6390,	6440,	5517,	4425,	4052,	4005,	4052]
+									},{
+										name: 'Mladá Boleslav ',
+										data: [5073,	5594,	4580,	5736,	7673,	9653,	11405,	10129,	8715,	8811,	8781,	9039,	9442,	9651]
+									},{
+										name: 'Nymburk ',
+										data: [1853,	2170,	2382,	2499,	3150,	3416,	3341,	3346,	3578,	3550,	3690,	3610,	3708,	3814]
+									},{
+										name: 'Praha-východ ',
+										data: [3433,	3657,	4050,	4360,	5072,	6608,	9669,	9954,	9566,	9827,	9687,	10151,	10728,	11160]
+									},{
+										name: 'Praha-západ ',
+										data: [3047,	3251,	3599,	4357,	5316,	6442,	7615,	7953,	8405,	8617,	9106,	9448,	9877,	10282]
+									},{
+										name: 'Příbram ',
+										data: [1664,	1634,	1880,	2050,	2303,	2548,	2929,	2797,	2762,	2795,	2730,	2701,	2625,	2648]
+									},{
+										name: 'Rakovník ',
+										data: [864,	974,	1024,	1097,	1219,	1795,	2367,	2437,	2741,	2452,	2127,	2077,	1998,	1817]
+									}]
+								});
+							});
+							</script>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+
+					<div class="kraj-bar kr2-plzensky display-none">
+						<p class="region_names"><center>Total by area and district</center></p>		
+							<div id="graph4" style="height: 480px"></div>
+							<script>
+							$(function () {
+								Highcharts.chart('graph4', {
+									chart: {
+										type: 'column'
+									},
+									title: {
+										text: null
+									},
+									subtitle: {
+										text: 'NUTS3'
+									},
+									xAxis: {
+										categories: ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015'],
+										crosshair: true
+									},
+									yAxis: {
+										min: 0,
+										title: {
+											text: 'Foreigners'
+										}
+									},
+									tooltip: {
+										headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+										pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+											'<td style="padding:0"><b>{point.y:.0f} </b></td></tr>',
+										footerFormat: '</table>',
+										shared: true,
+										useHTML: true
+									},
+									plotOptions: {
+										column: {
+											pointPadding:0.1,
+											borderWidth: 0.1
+										}
+									},
+									series: [{
+										name: 'Domažlice ',
+									  data: [904,	932,	982,	1054,	1323,	1664,	1977,	2144,	2270,	2326,	2406,	2538,	2640,	2750]
+									}, {
+										name: 'Klatovy ',
+										data: [1161,	1258,	1337,	1481,	1818,	2314,	2576,	2509,	2434,	2405,	2393,	2462,	2468,	2578] 	
+									}, {
+										name: 'Plzeň ',
+										data: [3900,	4947,	5062,	5357,	6031,	8770,	13244,	13801,	12108,	11258,	11241,	12222,	12812,	13649] 	 
+									}, {
+										name: 'Plzeň-jih ',
+										data: [952,	1044,	965,	958,	1302,	1749,	2236,	2241,	2002,	1908,	1888,	1844,	1787,	1786] 	 
+									},{
+										name: 'Plzeň-sever ',
+										data: [851,	1121,	985,	1035,	1256,	1311,	1467,	1481,	1431,	1387,	1438,	1521,	1608,	1677] 	 
+									},{
+										name: 'Rokycany ',
+										data: [763,	759,	912,	944,	1172,	1828,	2251,	1950,	1544,	1412,	1410,	1482,	1534,	1614]
+									},{
+										name: 'Tachov ',
+										data: [2284,	2626,	2287,	2377,	2530,	3350,	3885,	3436,	3386,	3188,	3090,	3097,	3109,	3250]
+									}]
+								});
+							});
+							</script>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+
+					<div class="kraj-bar kr2-karlovarsky display-none">
+						<p class="region_names"><center>Total by area and district</center></p>		
+							<div id="graph5" style="height: 480px"></div>
+							<script>
+							$(function () {
+								Highcharts.chart('graph5', {
+									chart: {
+										type: 'column'
+									},
+									title: {
+										text: null
+									},
+									subtitle: {
+										text: 'NUTS3'
+									},
+									xAxis: {
+										categories: ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015'],
+										crosshair: true
+									},
+									yAxis: {
+										min: 0,
+										title: {
+											text: 'Foreigners'
+										}
+									},
+									tooltip: {
+										headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+										pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+											'<td style="padding:0"><b>{point.y:.0f} </b></td></tr>',
+										footerFormat: '</table>',
+										shared: true,
+										useHTML: true
+									},
+									plotOptions: {
+										column: {
+											pointPadding:0.1,
+											borderWidth: 0.1
+										}
+									},
+									series: [{
+										name: 'Cheb ',
+									  data: [4855,	5376,	5831,	5823,	6666,	8063,	8179,	7829,	7635,	7527,	7174,	7271,	7202,	7302]
+									}, {
+										name: 'Karlovy Vary ',
+										data: [6600,	6612,	7559,	7185,	7642,	9030,	9774,	9445,	9482,	9280,	8575,	8886,	9010,	9056] 	
+									}, {
+										name: 'Sokolov ',
+										data: [1743,	1575,	1339,	1429,	1767,	2326,	2368,	2369,	2500,	2604,	2639,	2697,	2661,	2715] 	 
+									}]
+								});
+							});
+							</script>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+
+					<div class="kraj-bar kr2-ustecky display-none">
+						<p class="region_names"><center>Total by area and district</center></p>		
+							<div id="graph6" style="height: 480px"></div>
+							<script>
+							$(function () {
+								Highcharts.chart('graph6', {
+									chart: {
+										type: 'column'
+									},
+									title: {
+										text: null
+									},
+									subtitle: {
+										text: 'NUTS3'
+									},
+									xAxis: {
+										categories: ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015'],
+										crosshair: true
+									},
+									yAxis: {
+										min: 0,
+										title: {
+											text: 'Foreigners'
+										}
+									},
+									tooltip: {
+										headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+										pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+											'<td style="padding:0"><b>{point.y:.0f} </b></td></tr>',
+										footerFormat: '</table>',
+										shared: true,
+										useHTML: true
+									},
+									plotOptions: {
+										column: {
+											pointPadding:0.1,
+											borderWidth: 0.1
+										}
+									},
+									series: [{
+										name: 'Děčín ',
+									  data: [2692,	2814,	3389,	3692,	4234,	4916,	5007,	4949,	4494,	4446,	4330,	4250,	4250,	4175]
+									}, {
+										name: 'Chomutov ',
+										data: [2729,	2633,	2967,	3334,	3626,	4227,	4681,	4529,	5269,	5440,	5412,	5439,	5461,	5512] 	
+									}, {
+										name: 'Litoměřice ',
+										data: [1341,	1899,	2711,	3631,	5356,	6138,	6247,	4841,	3816,	3749,	3426,	3348,	3291,	3453] 	 
+									}, {
+										name: 'Louny ',
+										data: [1032,	1157,	1314,	1341,	1473,	1984,	2121,	2021,	1983,	2035,	2034,	2068,	2240,	2183] 	 
+									}, {
+										name: 'Most ',
+										data: [1697,	1686,	1712,	2109,	2823,	5268,	5574,	3745,	3532,	4088,	4938,	4819,	4905,	4985] 	 
+									},{
+										name: 'Teplice ',
+										data: [3229,	3271,	3783,	3912,	4410,	5413,	6069,	5897,	5714,	5722,	5702,	6839,	7122,	7543] 	 
+									},{
+										name: 'Ústí nad Labem ',
+										data: [3460,	3423,	3855,	4111,	4414,	5107,	5752,	6013,	5770,	5127,	4619,	4757,	4609,	4761]
+									}]
+								});
+							});
+							</script>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+
+					<div class="kraj-bar kr2-kralovehradecky display-none">
+						<p class="region_names"><center>Total by area and district</center></p>		
+							<div id="graph7" style="height: 480px"></div>
+							<script>
+							$(function () {
+								Highcharts.chart('graph7', {
+									chart: {
+										type: 'column'
+									},
+									title: {
+										text: null
+									},
+									subtitle: {
+										text: 'NUTS3'
+									},
+									xAxis: {
+										categories: ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015'],
+										crosshair: true
+									},
+									yAxis: {
+										min: 0,
+										title: {
+											text: 'Foreigners'
+										}
+									},
+									tooltip: {
+										headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+										pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+											'<td style="padding:0"><b>{point.y:.0f} </b></td></tr>',
+										footerFormat: '</table>',
+										shared: true,
+										useHTML: true
+									},
+									plotOptions: {
+										column: {
+											pointPadding:0.1,
+											borderWidth: 0.1
+										}
+									},
+									series: [{
+										name: 'Hradec Králové ',
+									  data: [3093,	3032,	3195,	3700,	4169,	4955,	5422,	5334,	5234,	4897,	4525,	4542,	4538,	4799]
+									}, {
+										name: 'Jičín ',
+										data: [985,	1011,	1131,	1346,	2185,	2783,	2953,	2664,	2727,	2428,	1937,	1984,	2005,	2014] 	
+									}, {
+										name: 'Náchod ',
+										data: [2202,	2246,	2224,	2294,	2488,	2748,	2783,	2530,	2490,	2458,	2433,	2483,	2435,	2488] 	 
+									}, {
+										name: 'Rychnov nad Kněžnou ',
+										data: [968,	859,	902,	1155,	1299,	1498,	1600,	1537,	1396,	1416,	1520,	1448,	1438,	1460] 	 
+									},{
+										name: 'Trutnov ',
+										data: [2138,	2121,	2400,	2799,	3185,	3528,	3759,	3179,	2951,	2879,	2854,	2855,	2850,	2922] 	 
+									}]
+								});
+							});
+							</script>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+
+					<div class="kraj-bar kr2-liberecky display-none">
+						<p class="region_names"><center>Total by area and district</center></p>		
+							<div id="graph8" style="height: 480px"></div>
+							<script>
+							$(function () {
+								Highcharts.chart('graph8', {
+									chart: {
+										type: 'column'
+									},
+									title: {
+										text: null
+									},
+									subtitle: {
+										text: 'NUTS3'
+									},
+									xAxis: {
+										categories: ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015'],
+										crosshair: true
+									},
+									yAxis: {
+										min: 0,
+										title: {
+											text: 'Foreigners'
+										}
+									},
+									tooltip: {
+										headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+										pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+											'<td style="padding:0"><b>{point.y:.0f} </b></td></tr>',
+										footerFormat: '</table>',
+										shared: true,
+										useHTML: true
+									},
+									plotOptions: {
+										column: {
+											pointPadding:0.1,
+											borderWidth: 0.1
+										}
+									},
+									series: [{
+										name: 'Česká Lípa ',
+									  data: [1648,	1717,	2054,	2217,	2287,	2559,	2914,	2842,	2919,	2925,	2981,	3029,	3230,	3602 ]
+									}, {
+										name: 'Jablonec nad Nisou ',
+										data: [2362,	2315,	2510,	2914,	3444,	3755,	3767,	3756,	3796,	3850,	3943,	3965,	3827] 	
+									}, {
+										name: 'Liberec ',
+										data: [4412,	4903,	5518,	6393,	7597,	8889,	8950,	8409,	8230,	8093,	8133,	8135,	8712] 	 
+									}, {
+										name: 'Semily ',
+										data: [1358,	1400,	1430,	1554,	1688,	1762,	1750,	1692,	1709,	1680,	1714,	1718,	1753] 	 
+									}]
+								});
+							});
+							</script>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+
+					<div class="kraj-bar kr2-pardubicky display-none">
+						<p class="region_names"><center>Total by area and district</center></p>		
+							<div id="graph9" style="height: 480px"></div>
+							<script>
+							$(function () {
+								Highcharts.chart('graph9', {
+									chart: {
+										type: 'column'
+									},
+									title: {
+										text: null
+									},
+									subtitle: {
+										text: 'NUTS3'
+									},
+									xAxis: {
+										categories: ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015'],
+										crosshair: true
+									},
+									yAxis: {
+										min: 0,
+										title: {
+											text: 'Foreigners'
+										}
+									},
+									tooltip: {
+										headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+										pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+											'<td style="padding:0"><b>{point.y:.0f} </b></td></tr>',
+										footerFormat: '</table>',
+										shared: true,
+										useHTML: true
+									},
+									plotOptions: {
+										column: {
+											pointPadding:0.1,
+											borderWidth: 0.1
+										}
+									},
+									series: [{
+										name: 'Chrudim ',
+									  data: [1086,	1204,	1216,	1109,	1182,	1503,	1599,	1527,	1573,	1512,	1389,	1375,	1425,	1460 ]
+									}, {
+										name: 'Pardubice ',
+										data: [2344,	1759,	1750,	2314,	3124,	4666,	6112,	5846,	6059,	5644,	5486,	5721,	6001,	6369] 	
+									}, {
+										name: 'Svitavy ',
+										data: [1085,	967,	942,	1018,	1099,	1220,	1288,	1362,	1311,	1293,	1215,	1181,	1168,	1205] 	 
+									}, {
+										name: 'Ústí nad Orlicí ',
+										data: [2108,	1877,	1955,	1977,	2265,	3173,	3589,	3237,	3120,	3046,	3025,	3024,	2965,	2977] 	 
+									}]
+								});
+							});
+							</script>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+
+					<div class="kraj-bar kr2-vysocina display-none">
+						<p class="region_names"><center>Total by area and district</center></p>		
+							<div id="graph10" style="height: 480px"></div>
+							<script>
+							$(function () {
+								Highcharts.chart('graph10', {
+									chart: {
+										type: 'column'
+									},
+									title: {
+										text: null
+									},
+									subtitle: {
+										text: 'NUTS3'
+									},
+									xAxis: {
+										categories: ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015'],
+										crosshair: true
+									},
+									yAxis: {
+										min: 0,
+										title: {
+											text: 'Foreigners'
+										}
+									},
+									tooltip: {
+										headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+										pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+											'<td style="padding:0"><b>{point.y:.0f} </b></td></tr>',
+										footerFormat: '</table>',
+										shared: true,
+										useHTML: true
+									},
+									plotOptions: {
+										column: {
+											pointPadding:0.1,
+											borderWidth: 0.1
+										}
+									},
+									series: [{
+										name: 'Havlíčkův Brod ',
+									  data: [747,	876,	1041,	1256,	1379,	1904,	2208,	1781,	1589,	1605,	1646,	1614,	1595,	1584]
+									}, {
+										name: 'Jihlava ',
+										data: [1472,	1689,	1445,	1526,	1783,	2218,	2592,	2471,	2365,	2338,	2322,	2372,	2381,	2473] 	
+									}, {
+										name: 'Pelhřimov ',
+										data: [1033,	1120,	988,	1131,	1250,	1615,	1733,	1358,	1298,	1335,	1343,	1405,	1410,	1565] 	 
+									}, {
+										name: 'Třebíč ',
+										data: [1085,	1251,	1453,	1413,	1632,	1730,	1738,	1674,	1589,	1448,	1319,	1273,	1299,	1267] 	 
+									},{
+										name: 'Žďár nad Sázavou ',
+										data: [909,	1025,	956,	834,	972,	1262,	1500,	1299,	1182,	1147,	1122,	1111,	1121,	1161] 	 
+									}]
+								});
+							});
+							</script>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+
+					<div class="kraj-bar kr2-olomoucky display-none">
+						<p class="region_names"><center>Total by area and district</center></p>		
+							<div id="graph110" style="height: 480px"></div>
+							<script>
+							$(function () {
+								Highcharts.chart('graph110', {
+									chart: {
+										type: 'column'
+									},
+									title: {
+										text: null
+									},
+									subtitle: {
+										text: 'NUTS3'
+									},
+									xAxis: {
+										categories: ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015'],
+										crosshair: true
+									},
+									yAxis: {
+										min: 0,
+										title: {
+											text: 'Foreigners'
+										}
+									},
+									tooltip: {
+										headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+										pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+											'<td style="padding:0"><b>{point.y:.0f} </b></td></tr>',
+										footerFormat: '</table>',
+										shared: true,
+										useHTML: true
+									},
+									plotOptions: {
+										column: {
+											pointPadding:0.1,
+											borderWidth: 0.1
+										}
+									},
+									series: [{
+										name: 'Jeseník ',
+									  data: [422,	447,	486,	546,	773,	732,	781,	773,	771,	808,	793,	814,	816,	811]
+									}, {
+										name: 'Olomouc ',
+										data: [3046,	3150,	3082,	3267,	3678,	4457,	4564,	4420,	4467,	4604,	4587,	4741,	4778,	4963] 	
+									}, {
+										name: 'Prostějov ',
+										data: [1116,	1193,	1178,	1193,	1165,	1280,	1304,	1273,	1302,	1305,	1355,	1362,	1373,	1407] 	 
+									}, {
+										name: 'Přerov ',
+										data: [1278,	1276,	1367,	1469,	1794,	2713,	2123,	1855,	1700,	1804,	1868,	1895,	1925,	1990] 	 
+									},{
+										name: 'Šumperk ',
+										data: [1048,	972,	990,	1022,	1089,	1140,	1137,	1119,	1225,	1244,	1204,	1229,	1218,	1242] 	 
+									}]
+								});
+							});
+							</script>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+
+					<div class="kraj-bar kr2-hlavni-mesto-praha display-none">
+						<p class="region_names"><center>Total by area and district "There is just available data by from 2009 "</center></p>	
+						
+							<div id="graph11" style="height: 480px"></div>
+							<script>
+							$(function () {
+								Highcharts.chart('graph11', {
+									chart: {
+										type: 'column'
+									},
+									title: {
+										text: null
+									},
+									subtitle: {
+										text: 'NUTS2'
+									},
+									xAxis: {
+										categories: ['2009','2010','2011','2012','2013','2014','2015'],
+										crosshair: true
+									},
+									yAxis: {
+										min: 0,
+										title: {
+											text: 'Foreigners'
+										}
+									},
+									tooltip: {
+										headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+										pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+											'<td style="padding:0"><b>{point.y:.0f} </b></td></tr>',
+										footerFormat: '</table>',
+										shared: true,
+										useHTML: true
+									},
+									plotOptions: {
+										column: {
+											pointPadding:0.1,
+											borderWidth: 0.1
+										}
+									},
+									series: [{
+										name: 'Praha 1 ',
+									  data: [3863,	4035,	4654,	4843,	5013,	5165,	5263 ]
+									}, {
+										name: 'Praha 2 ',
+										data: [7843,	7861,	9141,	9663,	9800,	10004,	10411] 	
+									}, {
+										name: 'Praha 3 ',
+										data: [9068,	9386,	10467,	11117,	11414,	12004,	12570] 	 
+									}, {
+										name: 'Praha 4 ',
+										data: [27780,	26508,	29082,	29515,	29697,	30954,	32263] 	 
+									},{
+										name: 'Praha 5 ',
+										data: [24104,	24506,	25823,	26726,	26709,	27521,	28180]
+									},{
+										name: 'Praha 6 ',
+										data: [15401,	15706,	17051,	17581,	17113,	17355,	17780]
+									},{
+										name: 'Praha 7 ',
+										data: [5610,	5857,	6394,	6464,	6539,	6770,	6967]
+									},{
+										name: 'Praha 8 ',
+										data: [11195,	11879,	12478,	11924,	11385,	12011,	12449]
+									},{
+										name: 'Praha 9 ',
+										data: [24359,	24148,	25082,	24644,	22733,	23744,	24303]
+									},{
+										name: 'Praha  10',
+										data: [17464,	17788,	19471,	20195,	20247,	20508,	20934]
+									},{
+										name: 'Praha ',
+										data: [1436,	773,	1140,	43,	356,	296,	288]
+									}]
+								});
+							});
+							</script>
+					
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+						
+					</div>
+
+					<div class="kraj-bar kr2-zlinsky display-none">
+					<p class="region_names"><center>Total by area and district</center></p>		
+							<div id="graph12" style="height: 480px"></div>
+							<script>
+							$(function () {
+								Highcharts.chart('graph12', {
+									chart: {
+										type: 'column'
+									},
+									title: {
+										text: null
+									},
+									subtitle: {
+										text: 'NUTS3'
+									},
+									xAxis: {
+										categories: ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015'],
+										crosshair: true
+									},
+									yAxis: {
+										min: 0,
+										title: {
+											text: 'Foreigners'
+										}
+									},
+									tooltip: {
+										headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+										pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+											'<td style="padding:0"><b>{point.y:.0f} </b></td></tr>',
+										footerFormat: '</table>',
+										shared: true,
+										useHTML: true
+									},
+									plotOptions: {
+										column: {
+											pointPadding:0.1,
+											borderWidth: 0.1
+										}
+									},
+									series: [{
+										name: 'Kroměříž ',
+									  data: [769,	847,	840,	804,	876,	1015,	1214,	1396,	1387,	1207,	1101,	1083,	1071,	1130]
+									}, {
+										name: 'Uherské Hradiště ',
+										data: [1485,	1722,	1530,	1708,	1942,	2189,	2385,	2208,	2201,	2188,	2188,	2200,	2239,	2353] 	
+									}, {
+										name: 'Vsetín ',
+										data: [2536,	2551,	1620,	1215,	1261,	1424,	1555,	1381,	1325,	1380,	1446,	1478,	1507,	1604] 	 
+									}, {
+										name: 'Zlín ',
+										data: [3472,	2995,	2384,	2199,	2517,	3011,	3259,	3148,	3119,	3234,	3233,	3242,	3289,	3451] 	 
+									}]
+								});
+							});
+							</script>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+
+					<div class="kraj-bar kr2-moravskoslezsky display-none">
+					<p class="region_names"><center>Total by area and district</center></p>		
+							<div id="graph13" style="height: 480px"></div>
+							<script>
+							$(function () {
+								Highcharts.chart('graph13', {
+									chart: {
+										type: 'column'
+									},
+									title: {
+										text: null
+									},
+									subtitle: {
+										text: 'NUTS3'
+									},
+									xAxis: {
+										categories: ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015'],
+										crosshair: true
+									},
+									yAxis: {
+										min: 0,
+										title: {
+											text: 'Foreigners'
+										}
+									},
+									tooltip: {
+										headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+										pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+											'<td style="padding:0"><b>{point.y:.0f} </b></td></tr>',
+										footerFormat: '</table>',
+										shared: true,
+										useHTML: true
+									},
+									plotOptions: {
+										column: {
+											pointPadding:0.1,
+											borderWidth: 0.1
+										}
+									},
+									series: [{
+										name: 'Bruntal ',
+									  data: [688,	730,	682,	678,	702,	773,	794,	798,	821,	864,	855,	885,	933,	935 ]
+									}, {
+										name: 'Frýdek-Místek ',
+										data: [2916,	2974,	2330,	2275,	2565,	2699,	3127,	2898,	2992,	3059,	3286,	3384,	3505,	3602] 	
+									}, {
+										name: 'Karviná ',
+										data: [6297,	6460,	6082,	6800,	7012,	7452,	7835,	6428,	5849,	5971,	6054,	6117,	6173,	6253] 	 
+									}, {
+										name: 'Nový Jicín ',
+										data: [1430,	1479,	1207,	1271,	1359,	1460,	1654,	1556,	1535,	1592,	1643,	1749,	1743,	1800] 	 
+									},{
+										name: 'Opava ',
+										data: [941,	917,	944,	974,	1052,	1197,	1489,	1417,	1583,	1511,	1492,	1567,	1612,	1649] 	 
+									},{
+										name: 'Ostrava-mesto ',
+										data: [6894,	7399,	7084,	7339,	7912,	9381,	10597,	10590,	9790,	9789,	9787,	10000,	9958,	10254,]
+									}]
+								});
+							});
+							</script>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+					</div>
+
+							<div class="kraj-bar kr2-jihomoravsky display-none">
+							<p class="region_names"><center>Total by area and district</center></p>		
+							<div id="graph14" style="height: 480px"></div>
+							<script>
+							$(function () {
+								Highcharts.chart('graph14', {
+									chart: {
+										type: 'column'
+									},
+									title: {
+										text: null
+									},
+									subtitle: {
+										text: 'NUTS3'
+									},
+									xAxis: {
+										categories: ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015'],
+										crosshair: true
+									},
+									yAxis: {
+										min: 0,
+										title: {
+											text: 'Foreigners'
+										}
+									},
+									tooltip: {
+										headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+										pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+											'<td style="padding:0"><b>{point.y:.0f} </b></td></tr>',
+										footerFormat: '</table>',
+										shared: true,
+										useHTML: true
+									},
+									plotOptions: {
+										column: {
+											pointPadding:0.1,
+											borderWidth: 0.1
+										}
+									},
+									series: [{
+										name: 'Blansko ',
+									  data: [1151,	1404,	1331,	1433,	1679,	1975,	2177,	1990,	1927,	2051,	2118,	2136,	2133,	2140]
+									}, {
+										name: 'Brno-město ',
+										data: [10673,	11773,	12284,	12365,	14730,	17059,	20076,	21468,	21307,	21435,	21723,	22821,	23681,	24850] 	
+									}, {
+										name: 'Brno-venkov ',
+										data: [2429,	3371,	4803,	5284,	5728,	7096,	6222,	6017,	5137,	5030,	4825,	4755,	4569,	4802] 	 
+									}, {
+										name: 'Břeclav ',
+										data: [1666,	1763,	1618,	1585,	1751,	1899,	2059,	2054,	2104,	2142,	2183,	2252,	2310,	2423] 	 
+									},{
+										name: 'Hodonín ',
+										data: [2099,	2065,	1382,	1237,	1370,	1472,	1656,	1727,	1781,	1866,	1911,	1931,	1983,	2095] 	 
+									},{
+										name: 'Vyškov ',
+										data: [973,	1138,	1306,	1004,	1196,	1358,	1395,	1518,	1519,	1453,	1449,	1513,	1524,	1611]
+									},{
+										name: 'Znojmo ',
+										data: [1048,	1154,	1189,	1326,	1529,	1747,	2034,	2133,	2178,	2409,	2481,	2396,	2388,	2445]
+									}]
+								});
+							});
+							</script>
+							
+								<div class="ct-chart ct-perfect-fourth" id="chart-jihomoravsky"></div>
+							</div>
+				</div> 
+				
+				
+		</div> <!-- end of second row --> 	
+		<div class="row">
+				<!-- end of the bar graph -->
+		</div> <!-- en of the third row -->
+				
+				 
+		
+		
+        
+					<footer class="page-footer">
+						<div class="footer-copyright">
+							<div class="row">
+								<div class="col s12 center">
+									©2016 Nivardo Villanueva Duran
+								</div>
+							</div>
+						</div>
+					</footer>
+	</div><!--/.container-->
+	
+
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script src="js/cezetmap.js"> </script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+
+        <script> /* TABLAS */
+            $(document).on('click', '.kraj', function() {
+				$('#kraj hlavni-mesto-praha').show();
+                var el = $('.click');
+                var className = el.attr('class');
+                var region = className.split(' ')[1];
+                $('.kraj-tabulka').addClass('display-none');
+                $('.kraj-bar').addClass('display-none');
+				$('.kr-' + region).removeClass('display-none');
+				$('.kr2-' + region).removeClass('display-none');
+            });
+            
+            $(document).on('onmouseover', '.kraj', function () {
+                $('kraj').addClass('kraj_hover');
+            });
+        </script>
+		
+		 <script>
+            $(document).on('click', '.kraj', function() {
+                var el = $('.click');
+                var className = el.attr('class');
+                var region = className.split(' ')[1];
+                $('.kraj-tabulka').addClass('display-none');
+                $('.kr-' + region).removeClass('display-none');
+
+
+                new Chartist.Line('#chart-jihocesky', {
+                    labels: ['2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[8698,9660,9954,10595,12584,15171,16560,15415,15037,14894,14838,15200,15366,16390]]
+                }, {
+                    low: 0,
+                    plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-stredocesky', {
+                    labels: ['2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[27038,29847,31127,35304,42588,50273,60123,58490,57757,57522,56810,57850,59860,61682]]
+                }, {
+                    low: 0,
+                    plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-plzensky', {
+                    labels: ['2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[10815,12687,12530,13206,15432,20986,27636,27562,25175,23884,23866,25166,25958,27304]]
+                }, {
+                    low: 0,
+                    plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-karlovarsky', {
+                    labels: ['2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[13198,13563,14729,14437,16075,19419,20321,19643,19617,19411,18388,18854,18873,19073]]
+                }, {
+                    low: 0,
+                    plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-ustecky', {
+                    labels: [ '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[16180,16883,19731,22130,26336,33053,35451,31995,30578,30607,30461,31520,31878,32612]]
+                }, {
+                    low: 0,
+                        plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-kralovehradecky', {
+                    labels: ['2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[9386,9269,9852,11294,13326,15512,16517,15244,14798,14078,13269,13312,13266,13683]]
+                }, {
+                    low: 0,
+                        plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-liberecky', {
+                    labels: ['2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[9069,9849,10672,11675,13148,15288,17320,17309,16776,16660,16604,16819,17048,17894]]
+                }, {
+                    low: 0,
+                    plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-pardubicky', {
+                    labels: ['2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[6623,5807,5863,6418,7670,10562,12588,11972,12063,11495,11115,11301,11559,12011]]
+                }, {
+                    low: 0,
+                        plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-vysocina', {
+                    labels: ['2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[5246,5961,5883,6160,7016,8729,9771,8583,8023,7873,7752,7775,7806,8050]]
+                }, {
+                    low: 0,
+                        plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-olomoucky', {
+                    labels: ['2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[6910,7038,7103,7497,8499,10322,9909,9440,9465,9765,9807,10041,10110,10413]]
+                }, {
+                    low: 0,
+                        plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-hlavni-mesto-praha', {
+                    labels: ['2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[70978,69115,77922,89997,103482,129002,141841,148123,148447,160783,162715,161006,166332,171408]]
+                }, {
+                    low: 0,
+                        plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-zlinsky', {
+                    labels: ['2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[8262,8115,6374,5926,6596,7639,8413,8133,8032,8009,7968,8003,8106,8538]]
+                }, {
+                    low: 0,
+                    plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-moravskoslezsky', {
+                    labels: ['2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[19166,19959,18329,19337,20602,22962,25496,23687,22570,22786,23117,23702,23924,24493]]
+                }, {
+                    low: 0,
+                        plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-jihomoravsky', {
+                    labels: ['2003','2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[20039,22668,23913,24234,27983,32606,35619,36907,35953,36386,36690,37804,38588,40366]]
+                }, {
+                    low: 0,
+                        plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+            });
+
+            $(document).on('onmouseover', '.kraj', function () {
+                $('kraj').addClass('kraj_hover');
+            });
+        </script>
+		
+		 <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+		 <script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/menumaker.js"></script>
+		<script type="text/javascript">
+			$("#cssmenu").menumaker({
+				title: "Menu",
+				format: "multitoggle"
+			});
+		</script>
+</body>
+  </html>

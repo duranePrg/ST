@@ -1,0 +1,535 @@
+ <!DOCTYPE html>
+  <html>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+     <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
+	  <link rel="stylesheet" href="css/chartist.min.css">
+      
+
+	  <!-- Responsive Menu-->
+	<link rel="stylesheet" type="text/css" href="css/menumaker.css">
+	  
+	  
+      <!--Import Highcharts.js-->
+      <script src="js/highcharts.js"></script>
+      <!-- <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
+      <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <style>
+		.generalGrahp {
+				display: none;
+		}
+    </style>
+    <body>
+
+    <div class="container">
+        <!-- Header goes here -->
+        <div class="row">
+            <header>
+                <h1>Foreigners in the Czech Republic</h1>
+            </header>
+            <!-- Navbar goes here -->
+            <div id="cssmenu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+						<li>
+							<a href="#">Foreiners </a>
+							<ul>
+								<li><a href="by-area-regions.html">By Regions</a></li>
+								<li><a href="by-citizenship.html">By Citizenships</a></li>
+								<li><a href="top6-citizenships.html">Top 6 Countries</a></li>
+								
+							</ul>
+						</li>
+						<li><a href="demographic-events.html">Demography</a></li>
+						<li><a href="#">Education</a>
+							<ul>
+								<li><a href="by-type-of-school.html">By type of school</a></li>
+								<li><a href="university.html">University</a></li>
+								<li><a href="higher-professional-schools.html">Higher schools</a></li>
+							</ul>
+						</li>
+					<li><a href="criminality.html">Criminality</a></li>
+					<li><a href="ilegal-migration.html">Illegal migration</a></li>
+					<li><a href="adquisition-of-cz.html">Acquisition of citizenship</a></li>
+				
+				</ul>
+			</div>
+		</div>
+        <!-- Page Layout here -->
+        <div class="row">
+				<div class="col s1">
+				</div>
+				<div class="col s11">
+					<div id="Africa" class="generalGrahp">
+					<h2>This is an alphabetically sorted list of African countries</h2>
+					<br>
+					<br>
+					<h2>.... In progress....</h2>
+					<div id="graph" style="width: 70%; height: 400px"></div>
+						
+					
+					</div>
+					<div id="SouthAmerica" class="generalGrahp">
+						<h3>This is an alphabetically sorted list of South America countries</h3>
+						<br>
+						<br>
+						<div id="graph2"></div>
+						<script>
+							$(function () {
+								Highcharts.chart('graph2', {
+									chart: {
+										type: 'column'
+									},
+									title: {
+										text: null
+									},
+									subtitle: {
+										text: 'Source: Czech Statistical Office, Directorate of Alien Police Service, Ministry of the Interior of the CR '
+									},
+									xAxis: {
+										categories: ['2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015'],
+										crosshair: true
+									},
+									yAxis: {
+										min: 0,
+										title: {
+											text: 'Foreigners'
+										}
+									},
+									tooltip: {
+										headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+										pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+											'<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+										footerFormat: '</table>',
+										shared: true,
+										useHTML: true
+									},
+									plotOptions: {
+										column: {
+											pointPadding:0.1,
+											borderWidth: 0.1
+										}
+									},
+									series: [{
+										name: 'Argentina ',
+									  data: [55,61,	79,	76,	78,	97,	112,116,78,136,134]
+									}, {
+										name: 'Bolivia ',
+										data: [50,53,	65,	63,	69,	65,	64,	62,	65,	67,	66] 	
+									}, {
+										name: 'Brazil ',
+										data: [120,	143,193,286,332,345,332,341,384,389,434] 	 
+									}, {
+										name: 'Chile ',
+										data: [47,45,58,69,83,94,98,107,109,116,122] 	 
+									},{
+										name: 'Colombia ',
+										data: [102,119,138,132,151,173,184,197,217,227,235] 	 
+									},{
+										name: 'Ecuador ',
+										data: [59,64,68,73,76,77,90,86,78,75,78]
+									},{
+										name: 'Guyana ',
+										data: [5,5,5,5,5,17,6,6,5,4,5]
+									},{
+										name: 'Paraguay ',
+										data: [18,20,27,32,35,30,30,25,24,26,23]
+									},{
+										name: 'Peru ',
+										data: [108,125,130,147,164,174,192,189,190,199,208]
+									},{
+										name: 'Suriname ',
+										data: [1,1,1,1,1,1,0,0,0,2,2]
+									},{
+										name: 'Uruguay ',
+										data: [10,12,12,17,14,16,18,21,21,20,23]
+									},{
+										name: 'Venezuela ',
+										data: [47,44,54,71,72,78,87,90,96,92,98]
+									}
+									
+									]
+								});
+							});
+						</script>
+					
+					</div>
+					
+					<div id="CentralandNorthAmerica" class="generalGrahp">
+						<h3>This is an alphabetically sorted list of Central and North America including archipelagic and island countries</h3>
+						<br>
+						<br>
+						<div id="graph21" style="height: 400px"></div>
+						<script>
+							$(function () {
+								Highcharts.chart('graph21', {
+									chart: {
+										type: 'column'
+									},
+									title: {
+										text: null
+									},
+									subtitle: {
+										text: 'Source: Czech Statistical Office, Directorate of Alien Police Service, Ministry of the Interior of the CR '
+									},
+									xAxis: {
+										categories: ['2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015'],
+										crosshair: true
+									},
+									yAxis: {
+										min: 0,
+										title: {
+											text: 'Foreigners'
+										}
+									},
+									tooltip: {
+										headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+										pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+											'<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+										footerFormat: '</table>',
+										shared: true,
+										useHTML: true
+									},
+									plotOptions: {
+										column: {
+											pointPadding:0.1,
+											borderWidth: 0.1
+										}
+									},
+									series: [{
+									  
+									  name: 'Barbados ',
+									  data: [0,	0,	0,	0,	1,	1,	2,	2,	2,	1,	1]
+									}, {
+										name: 'Belize ',
+										data: [3,	3,	3,	3,	3,	3,	3,	2,	2,	2,	2] 	
+									}, {
+										name: 'Canada ',
+										data: [590,	623,657,752,804,841,875,929,972,914,917] 	 
+									}, {
+										name: 'Costa Rica ',
+										data: [31,29,30,29,32,36,44,44,47,56,57] 	 
+									},{
+										name: 'Cuba ',
+										data: [203,206,260,232,274,267,253,265,271,276,285] 	 
+									},{
+										name: 'Dominican Republic ',
+										data: [8,13,17,25,28,29,30,37,39,44,48]
+									},{
+										name: 'El Salvador ',
+										data: [8,10,11,9,12,14,14,15,29,23,21]
+									},{
+										name: 'Grenada ',
+										data: [6,5,5,2,4,5,5,3,3,3,2]
+									},{
+										name: 'Guatemala ',
+										data: [10,14,16,17,22,21,24,25,23,24,27]
+									},{
+										name: 'Haiti ',
+										data: [1,1,1,1,1,14,2,6,7,7,10]
+									},				
+									]
+								});
+							});
+						</script>
+					
+					</div>
+					<div id="CentralandNorthAmerica2" class="generalGrahp">
+						<h3>This is an alphabetically sorted list of Central and North America including archipelagic and island countries</h3>
+						<br>
+						<br>
+						<div id="graph22" style="height: 400px"></div>
+						<script>
+							$(function () {
+								Highcharts.chart('graph22', {
+									chart: {
+										type: 'column'
+									},
+									title: {
+										text: null
+									},
+									subtitle: {
+										text: 'Source: Czech Statistical Office, Directorate of Alien Police Service, Ministry of the Interior of the CR '
+									},
+									xAxis: {
+										categories: ['2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015'],
+										crosshair: true
+									},
+									yAxis: {
+										min: 0,
+										title: {
+											text: 'Foreigners'
+										}
+									},
+									tooltip: {
+										headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+										pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+											'<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+										footerFormat: '</table>',
+										shared: true,
+										useHTML: true
+									},
+									plotOptions: {
+										column: {
+											pointPadding:0.1,
+											borderWidth: 0.1
+										}
+									},
+									series: [{
+										name: 'Honduras ',
+									  data: [10,9,11,10,13,1,17,19,15,24,23]
+									}, {
+										name: 'Jamaica ',
+										data: [4,5,6,5,6,5,7,6,7,8,12] 	
+									}, {
+										name: 'Mexico ',
+										data: [77,129,168,218,266,309,340,369,387,420,479] 	 
+									}, {
+										name: 'Nicaragua ',
+										data: [13,13,13,13,12,13,13,12,14,14,14] 	 
+									},{
+										name: 'Panama ',
+										data: [9,12,14,20,29,26,29,30,36,37,40] 	 
+									},{
+										name: 'Saint Christopher and Nevis ',
+										data: [0,0,0,0,0,2,0,0,0,1,1]
+									},{
+										name: 'Saint Lucia ',
+										data: [2,1,2,2,2,1,3,3,3,4,4]
+									},{
+										name: 'Saint Vincent and Grenadines ',
+										data: [0,0,1,1,1,1,1,0,1,1,1]
+									},{
+										name: 'Trinidad and Tobago ',
+										data: [1,3,3,4,3,5,4,5,5,4,4]
+									},{
+										name: 'United States ',
+										data: [3952,4212,4452,5272,5941,6074,7317,6976,7134,6476,6478]
+									}
+									
+									]
+								});
+							});
+						</script>
+					
+					</div>
+					<div id="Asia" class="generalGrahp">
+					<h3>This is an alphabetically sorted list of Asian countries</h3>
+					<br>
+						<br>
+					</div>
+					<div id="Europa" class="generalGrahp">
+					<h3>This is an alphabetically sorted list of European countries</h3>
+					<br>
+						<br>
+					</div>
+					<div id="Oceania" class="generalGrahp">
+					<h3>This is an alphabetically sorted list of Oceanian countries</h3>
+					<br>
+						<br>
+					<div id="graph4" style="width: 70%; height: 400px"></div>
+						<script>
+							/*$(function () {
+								Highcharts.chart('graph4', {
+									chart: {
+										type: 'column'
+									},
+									title: {
+										text: null
+									},
+									subtitle: {
+										text: 'Source: Ministry of Education, Youth and Sports '
+									},
+									xAxis: {
+										categories: ['2003/04','2004/05','2005/06','2006/07','2007/08','2008/09','2009/10','2010/11','2011/12','2012/13','2013/14','2014/15'],
+										crosshair: true
+									},
+									yAxis: {
+										min: 0,
+										title: {
+											text: 'Foreigners'
+										}
+									},
+									tooltip: {
+										headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+										pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+											'<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+										footerFormat: '</table>',
+										shared: true,
+										useHTML: true
+									},
+									plotOptions: {
+										column: {
+											pointPadding:0.1,
+											borderWidth: 0.1
+										}
+									},
+									series: [{
+										name: ' ',
+									  data: [ ]
+									}, {
+										name: 'Bbbb ',
+										data: [123,1113,12279,1250,1293,133,1339,1419,145,1551,1509,16477] 	
+									}, {
+										name: 'Secondary schools ',
+										data: [354,4250,4940,5615,614,7134,7900,8458,8852,9024,9147,8837] 	 
+									}, {
+										name: 'Conservatoires ',
+										data: [74,82,93,112,110,1351,1184,136,151,169,185,217] 	 
+									},{
+										name: 'Higher professional schools ',
+										data: [74,82,93,112,110,131,118,136,151,169,185,217] 	 
+									},{
+										name: 'Universities ',
+										data: [1077,1707,2088,2384,2751,3016,3444,3754,3742,3948,4442,4179]
+									}]
+								});
+							});*/
+						</script>
+					</div>
+					<div id="Antartida" class="generalGrahp">
+					<h3>This is an alphabetically sorted list of Antartida countries</h3>
+						<div id="graph4" style="width: 70%; height: 400px"></div>
+						<script>
+							/*$(function () {
+								Highcharts.chart('graph4', {
+									chart: {
+										type: 'column'
+									},
+									title: {
+										text: null
+									},
+									subtitle: {
+										text: 'Source: Ministry of Education, Youth and Sports '
+									},
+									xAxis: {
+										categories: ['2003/04','2004/05','2005/06','2006/07','2007/08','2008/09','2009/10','2010/11','2011/12','2012/13','2013/14','2014/15'],
+										crosshair: true
+									},
+									yAxis: {
+										min: 0,
+										title: {
+											text: 'Foreigners'
+										}
+									},
+									tooltip: {
+										headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+										pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+											'<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+										footerFormat: '</table>',
+										shared: true,
+										useHTML: true
+									},
+									plotOptions: {
+										column: {
+											pointPadding:0.1,
+											borderWidth: 0.1
+										}
+									},
+									series: [{
+										name: 'Nursery schools ',
+									  data: [3252,3244,3213,2811,3078,3535,3963,4223,4714,5434,6307,7214 ]
+									}, {
+										name: 'Basic schools ',
+										data: [12973,12113,12279,12504,12963,13583,13839,14109,14315,14551,15109,16477] 	
+									}, {
+										name: 'Secondary schools ',
+										data: [3584,4250,4940,5615,6314,7134,7900,8458,8852,9024,9147,8837] 	 
+									}, {
+										name: 'Conservatoires ',
+										data: [74,82,93,112,110,131,118,136,151,169,185,217] 	 
+									},{
+										name: 'Higher professional schools ',
+										data: [74,82,93,112,110,131,118,136,151,169,185,217] 	 
+									},{
+										name: 'Universities ',
+										data: [13077,17071,20888,23874,27051,30136,34454,37524,38742,39484,40442,41179]
+									}]
+								});
+							});*/
+						</script>
+					</div>	
+				</div>
+			<!--<div class="form_settings"> -->
+		    		
+			
+			
+			
+			<!-- <input class="submit" type="submit" name="submit" value="Change" />
+		    </div>-->
+			
+		</div>
+			
+		<div class="row">
+		<div class="col s12 center">
+			<select id="target" >    
+			    <option value="Africa">África</option>
+				<option value="SouthAmerica"  selected="selected">South America</option>
+				<option value="CentralandNorthAmerica">Central and North America (B - H)</option>
+				<option value="CentralandNorthAmerica2">Central and North America (H - U)</option>
+				<option value="Asia">Asia</option>
+				<option value="Europa">Europa</option>
+				<option value="Oceania">Oceanía</option>
+				<option value="Antartida">Antártida</option>
+			</select>
+			</div>
+		</div>
+		<div class="row">
+			<p class="parragraph2"> More info ...<br> 		<p>
+		</div>
+			
+		
+
+   <div>
+            <footer class="page-footer">
+                <div class="footer-copyright">
+                    <div class="row">
+                        <div class="col s12 center">
+                            ©2016 Nivardo Villanueva Duran
+                        </div>
+                    </div>
+                </div>
+            </footer>
+    </div><!--/.container-->
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+	  <script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/menumaker.js"></script>
+		<script type="text/javascript">
+			$("#cssmenu").menumaker({
+				title: "Menu",
+				format: "multitoggle"
+			});
+		</script>
+		<script>
+           /* document
+                .getElementById('target')
+                .addEventListener('change', function () {
+                    'use strict';
+                    var vis = document.querySelector('.vis'),   
+                        target = document.getElementById(this.value);
+                    if (vis !== null) {
+                        vis.className = 'generalGrahp';
+                    }
+                    if (target !== null ) {
+                        target.className = 'vis';
+                    }
+            });*/
+			
+			$(document).ready(function () {
+				  $('.generalGrahp').hide();
+				  $('#SouthAmerica').show();
+				  $('#target').change(function () {
+					$('.generalGrahp').hide();
+					$('#'+$(this).val()).show();
+				  })
+				});
+        </script>
+    </body>
+ </html>
